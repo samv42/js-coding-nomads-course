@@ -20,6 +20,16 @@
  * that is demonstrated below. For the labels, be sure to come up 
  * with clear and descriptive names.
  */
-
+let one = 1111
+let two = 2222
+let three = 3333
+let luckyNumber = 7
+console.log("sum", one+two+three+luckyNumber)
+console.log("smallest", three-one-two)
+console.log("multiply", one*two*three)
+console.log("divide", three/ (two-one))
+console.log("modulo one", one%luckyNumber)
+console.log("modulo two", two%luckyNumber)
+console.log("modulo three", three%luckyNumber)
 let result = 0
 console.log("Label", result)

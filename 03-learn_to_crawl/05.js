@@ -24,4 +24,19 @@
  * in which interpolation won't work, seeing as it's a relatively new method and
  * support for it is not everywhere.
  */
+let name = "Sam"
+let greeting = "What's up"
+let friend = "Tom"
+let brother = "Fred"
+let date = "19"
+let month = "Febuary"
+let year = "2025"
+let age = 29
 
+greetBrother = `${greeting} ${brother}`
+greetFriendWithDate = `${greeting} ${friend}, today is ${month} ${date}`
+inTwentyYears = "In 20 years I will be " + (age+20) + " years old."
+console.log(greeting+" "+friend)
+console.log(greetBrother)
+console.log(greetFriendWithDate)
+console.log(inTwentyYears)
