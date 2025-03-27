@@ -14,3 +14,21 @@
  * find both ways!
  *
  */
+// for(let i = 5; i <= 1000; i = i + 5) {
+//     console.log(i);
+// }
+// for(let i = -100; i <=100; i++) {
+//     console.log(i)
+// }
+// let plusOrMinus = true
+// for(let i = 0; i <= 5000; i++) {
+//     if(plusOrMinus == true){
+//         i = i + 3;
+//         plusOrMinus = false;
+//     }else{
+//         i = i - 1;
+//         plusOrMinus = true;
+//     }
+//     console.log(i);
+// }
+//Final output: 5003

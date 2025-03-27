@@ -40,7 +40,37 @@ function getRandomNumber(){
  *
  */
 
-let randomNumber = getRandomNumber() + getRandomNumber()
+let age = Math.floor((Math.random() * 100) + 1);
+let price = 0;
+let fare = "";
+if(age < 5) {
+    fare = "infant fare"
+} else if(age < 13) {
+    fare = "child fare"
+    price = 5
+} else if (age < 21) {
+    fare = "teenager fare"
+    price = 10
+} else if(age < 30) {
+    fare = "young person fare"
+    price = 15
+} else if(age < 65) {
+    fare = "adult fare"
+    price = 20
+} else {
+    fare = "pensioner fare"
+    price = 18
+}
+randomNum = Math.floor((Math.random() * 10) + 1)
+console.log(randomNum)
+if(randomNum == 10) {
+    console.log("Congradulations! You won a free ticket for today!")
+} else{
+if(fare == "infant fare") {
+console.log("Since you are under 5, your fare is free!" )
+}else{
+console.log("You will pay the " + fare + ". That will be " +price + " dollars, please." )}}
+console.log(age)
 
-console.log(randomNumber)
+
 
