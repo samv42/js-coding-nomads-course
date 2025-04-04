@@ -70,3 +70,46 @@ stores =  [
     [ '4003IN', 'Target', 'IN', 'North', 'Attica' ],
     [ '4003KY', 'Target', 'KY', 'North', 'Ashland' ]
 ]
+
+/* 1. Log only the city of each store.
+* 2. Log only the names of stores in state "CA".
+* 3. Log the number of Target stores in total.
+* 4. Log the number of each type of store. I.e. 5 Targets, 10 K-Marts - log
+*    these with a presentation string. I.e. "There are __ K-Marts in total."*/
+// for(let i = 0; i < stores.length; i++) {
+//     console.log("City: " + stores[i][4]);
+// }
+
+// for(let i = 0; i < stores.length; i++) {
+//     if(stores[i][2] == "CA"){
+//     console.log("Store in California: " + stores[i][1]);
+//     }
+// }
+let totalTarget = 0;
+let totalKMart = 0;
+let totalApplianceDirect = 0;
+let totalCircuitCity = 0;
+for(let i = 0; i < stores.length; i++) {
+    if(stores[i][1] == "Target"){
+        totalTarget++;
+    }
+    }
+for(let i = 0; i < stores.length; i++) {
+    if(stores[i][1] == "K-Mart"){
+        totalKMart++;
+    }
+    }
+for(let i = 0; i < stores.length; i++) {
+    if(stores[i][1] == "Appliance Direct"){
+        totalApplianceDirect++;
+    }
+    }
+for(let i = 0; i < stores.length; i++) {
+    if(stores[i][1] == "Circuit City"){
+        totalCircuitCity++;
+    }
+    }
+console.log("Total Targets: " + totalTarget);
+console.log("Total K-Marts: " + totalKMart);
+console.log("Total Appliance Direct: " + totalApplianceDirect);
+console.log("Total Circuit City: " + totalCircuitCity);

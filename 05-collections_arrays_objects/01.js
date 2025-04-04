@@ -27,10 +27,45 @@
 //     console.log(room[3][i]);
 // } 
 
-let numbers = [];
-for(let i = 1; i<=100; i++) {
-    numbers.push(i);
+//Excercise 4-5
+// let numbers = [];
+// for(let i = 1; i<=100; i++) {
+//     numbers.push(i);
+// }
+// let sum = 0;
+// for(let i = 0; i < numbers.length; i++) {
+//     sum = sum + numbers[i];
+// }
+// console.log(sum);
+
+//Excercise 6-8
+function getSum(numArray){
+    sum = 0;
+    for(let i = 0; i < numArray.length; i++) {
+        sum = sum + numArray[i];
+    }
+    return sum;
 }
-for(let i = 0; i < numbers.length; i++) {
-    console.log(numbers[i]);
+function getRandomNumber(){
+    return Math.floor((Math.random() * 10) + 1);
 }
+let randomNums = [];
+let evenNums = [];
+let oddNums = [];
+for(let i = 0; i <100; i++) {
+randomNums.push(getRandomNumber());
+}
+
+for(let i = 0; i < randomNums.length; i++) {
+    if(randomNums[i] % 2 == 0) {
+        evenNums.push(randomNums[i]);
+        //console.log("Even: " + randomNums[i]);
+    }else{
+        oddNums.push(randomNums[i]);
+        //console.log("Odd: " + randomNums[i]);
+    }
+}
+let evenSum = getSum(evenNums);
+let oddSum = getSum(oddNums);
+console.log("Sum of even numbers: " + evenSum);
+console.log("Sum of odd numbers: " + oddSum);
