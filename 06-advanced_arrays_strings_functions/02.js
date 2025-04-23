@@ -938,3 +938,83 @@ let expenses = [
     "Bank of America - Credit Card",
   ],
 ];
+
+/* Remove the first sub array containing headers without manually deleting it.
+* Do you remember the method to remove the first element of an array?
+* 
+* Then, using forEach and arrow functions:
+*
+* 1. Output the total amount of expenses for 2017 and 2018.
+* 2. Output the total amount paid for Groceries.
+* 3. Output the total difference in each account after all transactions. So if
+*    $100 was deposited into the account and $50 spent, then the total change
+*    would be $50.
+* 4. Create a new array where each row only has the "date", "description", and "amount"
+*    fields of rows that have the category "Eating Out".
+* 5. Create another array where each row only has the "date", "description", and "amount"
+*    fields of rows that have that have the category "Gear and Clothing".
+*/
+expenses.shift();
+let totalExpense = 0;
+expenses.forEach((expense) => {
+  if(expense[0].includes("2017") || expense[0].includes("2018")) {
+    totalExpense = totalExpense + expense[3];
+  }
+});
+console.log("Total expenses 2017 and 2018: " ,totalExpense);
+
+let totalGroceries = 0;
+expenses.forEach((expense) => {
+  if(expense[2].includes("Groceries")) {
+    totalGroceries = totalGroceries + expense[3];
+  }
+});
+console.log("Total spent on groceries: " ,totalGroceries);
+
+// let accounts = new Map();
+// let accountNumbers = [];
+// let contains;
+// expenses.forEach((expense) => {
+//   contains = false;
+//   if(accountNumbers.length == 0) {
+//     accounts.set(expense[5], 0);
+//     accountNumbers.push(expense[5]);
+//   }
+//   for(let i = 0; i < accountNumbers.length; i++) {
+//     if(accounts.has(expense[5])) {
+//       contains = true;
+//       accounts.set(expense[5], accounts.get(expense[5]) + expense[3]);
+//     }
+//     if(i == accountNumbers.length -1 && contains == false){
+//       accounts.set(expense[5], 0);
+//       accountNumbers.push(expense[5]);
+//     }
+//   }
+// });
+// console.log("xxxxxxxxxxxxxxxxxxxx");
+// accountNumbers.forEach((account) => console.log(account));
+// for(let i = 0; i < accountNumbers.length; i++) {
+//   console.log("Account " + accountNumbers[i] + " Balance: " + accounts.get(accountNumbers[i]));
+// }
+//excercise 4 and 5
+let eatingOut = [];
+let gearClothing = [];
+
+expenses.forEach((expense) => {
+    if(expense[2] == "Eating Out") {
+      eatingOut.push([
+        expense[0],
+        expense[2],
+        expense[3]
+      ]);
+    }
+    if(expense[2] == "Gear and Clothing") {
+      gearClothing.push([
+        expense[0],
+        expense[2],
+        expense[3]
+      ]);
+    }
+});
+eatingOut.forEach((expense) => console.log("Eating out: " ,expense[0]));
+gearClothing.forEach((expense) => console.log("Gear and Clothing: " ,expense[0]));
